@@ -10,6 +10,7 @@ C_SRCS += \
 ../Core/Src/fsm_long_button_pressed.c \
 ../Core/Src/fsm_simple_button.c \
 ../Core/Src/global.c \
+../Core/Src/led_blinky.c \
 ../Core/Src/main.c \
 ../Core/Src/stm32f1xx_hal_msp.c \
 ../Core/Src/stm32f1xx_it.c \
@@ -24,6 +25,7 @@ OBJS += \
 ./Core/Src/fsm_long_button_pressed.o \
 ./Core/Src/fsm_simple_button.o \
 ./Core/Src/global.o \
+./Core/Src/led_blinky.o \
 ./Core/Src/main.o \
 ./Core/Src/stm32f1xx_hal_msp.o \
 ./Core/Src/stm32f1xx_it.o \
@@ -38,6 +40,7 @@ C_DEPS += \
 ./Core/Src/fsm_long_button_pressed.d \
 ./Core/Src/fsm_simple_button.d \
 ./Core/Src/global.d \
+./Core/Src/led_blinky.d \
 ./Core/Src/main.d \
 ./Core/Src/stm32f1xx_hal_msp.d \
 ./Core/Src/stm32f1xx_it.d \

@@ -28,6 +28,7 @@
 #include "displayLed.h"
 #include "global.h"
 #include "fsm_long_button_pressed.h"
+#include "led_blinky.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -101,11 +102,13 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   display7SEG(counterLed);
   status = INIT;
+  setTimer2(500);
   while (1)
   {
     /* USER CODE END WHILE */
 	  fsm_simple_button_run();
 	  fsm_long_button_pressed_run();
+	  led_Blinky();
 //	  if(is_long_pressed(0) == 1){
 //		  if(is_1s(0) == 1){
 //		  counterLed++;

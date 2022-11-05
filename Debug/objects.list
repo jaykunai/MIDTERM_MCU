@@ -3,6 +3,7 @@
 "./Core/Src/fsm_long_button_pressed.o"
 "./Core/Src/fsm_simple_button.o"
 "./Core/Src/global.o"
+"./Core/Src/led_blinky.o"
 "./Core/Src/main.o"
 "./Core/Src/stm32f1xx_hal_msp.o"
 "./Core/Src/stm32f1xx_it.o"

@@ -15,6 +15,7 @@
 #define RESET_IS_PRESSED 2
 #define INC_IS_PRESSED 3
 #define DEC_IS_PRESSED 4
+#define TIME_OUT 5
 
 #define INC_LONG_PRESSED 7
 #define DEC_LONG_PRESSED 8

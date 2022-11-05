@@ -17,6 +17,7 @@ void fsm_long_button_pressed_run(){
 		}
 			display7SEG(counterLed);
 	}
+		//release button
 		if(is_long_pressed(1) == 0){
 			display7SEG(counterLed);
 			status = INIT;
@@ -33,6 +34,7 @@ void fsm_long_button_pressed_run(){
 		}
 			display7SEG(counterLed);
 	}
+		//release button
 		if(is_long_pressed(2) == 0){
 			display7SEG(counterLed);
 			status = INIT;
