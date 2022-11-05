@@ -16,11 +16,14 @@ void fsm_long_button_pressed_run(){
 				if(counterLed > 9) counterLed = 0;
 		}
 			display7SEG(counterLed);
-	}
+		}
+		if(is_long_pressed(2) == 1){
+			status = BOTH_LONG_PRESSED;
+		}
 		//release button
 		if(is_long_pressed(1) == 0){
 			display7SEG(counterLed);
-			status = INIT;
+			status = INC_IS_PRESSED;
 		}
 		break;
 	case DEC_LONG_PRESSED:
@@ -33,13 +36,24 @@ void fsm_long_button_pressed_run(){
 			}
 		}
 			display7SEG(counterLed);
-	}
+		}
+		if(is_long_pressed(1) == 1){
+			status = BOTH_LONG_PRESSED;
+		}
 		//release button
 		if(is_long_pressed(2) == 0){
 			display7SEG(counterLed);
-			status = INIT;
+			status = DEC_IS_PRESSED;
 		}
 		break;
+	case BOTH_LONG_PRESSED:
+		if(is_long_pressed(1) == 1 && is_long_pressed(2) == 0){
+			status = INC_LONG_PRESSED;
+		}
+		if(is_long_pressed(1) == 0 && is_long_pressed(2) == 1){
+			status = DEC_LONG_PRESSED;
+		}
+		display7SEG(counterLed);
 	default:
 		break;
 	}

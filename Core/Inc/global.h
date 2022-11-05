@@ -19,6 +19,8 @@
 
 #define INC_LONG_PRESSED 7
 #define DEC_LONG_PRESSED 8
+#define BOTH_LONG_PRESSED 9
+
 extern int status;
 extern int counterLed;
 

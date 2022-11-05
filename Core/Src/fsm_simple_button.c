@@ -11,7 +11,7 @@
 void fsm_simple_button_run(){
 	switch(status){
 	case INIT:
-		if(is_button_pressed(0) == 1 || is_button_pressed(2) == 1){
+		if(is_button_pressed(0) == 1){
 			counterLed = 0;
 			status = RESET_IS_PRESSED;
 		}
@@ -20,6 +20,11 @@ void fsm_simple_button_run(){
 			if(counterLed > 9) counterLed = 0;
 			display7SEG(counterLed);
 			status = INC_IS_PRESSED;
+		}
+		if(is_button_pressed(2) == 1){
+			counterLed = 9;
+			display7SEG(counterLed);
+			status = DEC_IS_PRESSED;
 		}
 		break;
 	case RESET_IS_PRESSED:
@@ -127,6 +132,7 @@ void fsm_simple_button_run(){
 			}else{
 				counterLed = 9;
 			}
+			display7SEG(counterLed);
 			setTimer1(10000);
 			status = DEC_IS_PRESSED;
 		}

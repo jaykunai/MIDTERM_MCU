@@ -109,20 +109,6 @@ int main(void)
 	  fsm_simple_button_run();
 	  fsm_long_button_pressed_run();
 	  led_Blinky();
-//	  if(is_long_pressed(0) == 1){
-//		  if(is_1s(0) == 1){
-//		  counterLed++;
-//		  }
-////		  HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
-//	  }
-//	  display7SEG(counterLed%10);
-//	  if(timer1_flag == 1){
-////		  HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
-//		  display7SEG(i%10);
-//		  i++;
-//		  setTimer1(1000);
-//	  }
-
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
